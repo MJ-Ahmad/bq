@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Admin Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>body{padding-top:70px}.sidebar{min-height:80vh}</style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Admin</a>
+      <div class="d-flex align-items-center">
+        <select id="langSelect" class="form-select form-select-sm me-2" style="width:auto">
+          <option value="en">EN</option>
+          <option value="bn">BN</option>
+          <option value="ar">AR</option>
+        </select>
+        <button id="logoutBtn" class="btn btn-outline-light btn-sm">Logout</button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row">
+      <aside class="col-md-2 bg-light sidebar p-3">
+        <div class="mb-3">
+          <strong id="adminName">Admin</strong>
+          <div class="small text-muted" id="adminEmail"></div>
+        </div>
+        <ul class="nav flex-column" id="adminMenu">
+          <li class="nav-item"><a class="nav-link" href="#" data-widget="overview">Overview</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" data-widget="users">Users</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" data-widget="audit">Audit Logs</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" data-widget="fees">Fees</a></li>
+        </ul>
+      </aside>
+
+      <main class="col-md-10 p-4">
+        <div id="widgets">
+          <div id="overviewWidget" class="mb-4">
+            <h3>Overview</h3>
+            <div class="row">
+              <div class="col-sm-3">
+                <div class="card p-3">
+                  <div class="h5" id="countAdmins">Admins: 0</div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="card p-3">
+                  <div class="h5" id="countTeachers">Teachers: 0</div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="card p-3">
+                  <div class="h5" id="countStudents">Students: 0</div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="card p-3">
+                  <div class="h5" id="countParents">Parents: 0</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="usersWidget" class="d-none">
+            <h3>Users</h3>
+            <div id="usersTableContainer"></div>
+          </div>
+
+          <div id="auditWidget" class="d-none">
+            <h3>Audit Logs</h3>
+            <div id="auditList" class="list-group"></div>
+          </div>
+
+          <div id="feesWidget" class="d-none">
+            <h3>Fees</h3>
+            <div id="feesList" class="list-group"></div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script>
+    const MASTER_JSON = 'data/master.json';
+    let master = null;
+    let lang = localStorage.getItem('mms_lang') || 'en';
+
+    function requireAuth() {
+      const token = sessionStorage.getItem('mms_token');
+      const user = JSON.parse(sessionStorage.getItem('mms_user') || 'null');
+      if (!token || !user || user.role !== 'admin') {
+        window.location.href = 'admin_password.html';
+        return null;
+      }
+      return user;
+    }
+
+    async function loadMaster() {
+      try {
+        const res = await fetch(MASTER_JSON);
+        master = await res.json();
+        render();
+      } catch (e) {
+        console.warn('master.json load failed', e);
+      }
+    }
+
+    function render() {
+      const user = requireAuth();
+      if (!user) return;
+      document.getElementById('adminName').textContent = user.displayName || user.id;
+      document.getElementById('adminEmail').textContent = user.email || '';
+      document.getElementById('countAdmins').textContent = 'Admins: ' + (master.roles?.admins?.length || 0);
+      document.getElementById('countTeachers').textContent = 'Teachers: ' + (master.roles?.teachers?.length || 0);
+      document.getElementById('countStudents').textContent = 'Students: ' + (master.roles?.students?.length || 0);
+      document.getElementById('countParents').textContent = 'Parents: ' + (master.roles?.parents?.length || 0);
+
+      // users table
+      const usersContainer = document.getElementById('usersTableContainer');
+      usersContainer.innerHTML = '';
+      const table = document.createElement('table');
+      table.className = 'table table-sm';
+      table.innerHTML = '<thead><tr><th>ID</th><th>Name</th><th>Email</th><th>Role</th></tr></thead>';
+      const tbody = document.createElement('tbody');
+      (master.roles?.admins || []).forEach(a => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `<td>${a.id}</td><td>${a.displayName}</td><td>${a.email || ''}</td><td>Admin</td>`;
+        tbody.appendChild(tr);
+      });
+      (master.roles?.teachers || []).forEach(t => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `<td>${t.id}</td><td>${t.displayName}</td><td>${t.email || ''}</td><td>Teacher</td>`;
+        tbody.appendChild(tr);
+      });
+      (master.roles?.students || []).forEach(s => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `<td>${s.id}</td><td>${s.displayName}</td><td>${s.email || ''}</td><td>Student</td>`;
+        tbody.appendChild(tr);
+      });
+      (master.roles?.parents || []).forEach(p => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `<td>${p.id}</td><td>${p.displayName}</td><td>${p.email || ''}</td><td>Parent</td>`;
+        tbody.appendChild(tr);
+      });
+      table.appendChild(tbody);
+      usersContainer.appendChild(table);
+
+      // audit
+      const auditList = document.getElementById('auditList');
+      auditList.innerHTML = '';
+      (master.audit?.entries || []).forEach(a => {
+        const el = document.createElement('div');
+        el.className = 'list-group-item';
+        el.textContent = `${a.timestamp} — ${a.userId} — ${a.action} — ${a.targetId || ''} — ${a.notes || ''}`;
+        auditList.appendChild(el);
+      });
+
+      // fees
+      const feesList = document.getElementById('feesList');
+      feesList.innerHTML = '';
+      (master.dashboards?.sampleData?.fees || []).forEach(f => {
+        const el = document.createElement('div');
+        el.className = 'list-group-item';
+        el.textContent = `Student ${f.studentId} — ${f.status} — ${f.amount || 0}`;
+        feesList.appendChild(el);
+      });
+    }
+
+    // menu switching
+    document.getElementById('adminMenu').addEventListener('click', (e) => {
+      e.preventDefault();
+      const widget = e.target?.dataset?.widget;
+      if (!widget) return;
+      document.querySelectorAll('#widgets > div').forEach(d => d.classList.add('d-none'));
+      if (widget === 'overview') document.getElementById('overviewWidget').classList.remove('d-none');
+      if (widget === 'users') document.getElementById('usersWidget').classList.remove('d-none');
+      if (widget === 'audit') document.getElementById('auditWidget').classList.remove('d-none');
+      if (widget === 'fees') document.getElementById('feesWidget').classList.remove('d-none');
+    });
+
+    // logout
+    document.getElementById('logoutBtn').addEventListener('click', () => {
+      sessionStorage.removeItem('mms_token');
+      sessionStorage.removeItem('mms_user');
+      window.location.href = 'admin_password.html';
+    });
+
+    // language
+    document.getElementById('langSelect').value = lang;
+    document.getElementById('langSelect').addEventListener('change', (e) => {
+      lang = e.target.value;
+      localStorage.setItem('mms_lang', lang);
+      if (lang === 'ar') document.documentElement.dir = 'rtl'; else document.documentElement.dir = 'ltr';
+      // re-render if needed
+    });
+
+    // init
+    loadMaster();
+    if (lang === 'ar') document.documentElement.dir = 'rtl';
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

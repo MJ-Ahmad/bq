@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Parent Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>body{padding-top:70px}.sidebar{min-height:80vh}</style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-secondary fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Parent</a>
+      <div class="d-flex align-items-center">
+        <select id="langSelect" class="form-select form-select-sm me-2" style="width:auto">
+          <option value="en">EN</option>
+          <option value="bn">BN</option>
+          <option value="ar">AR</option>
+        </select>
+        <button id="logoutBtn" class="btn btn-outline-light btn-sm">Logout</button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row">
+      <aside class="col-md-2 bg-light sidebar p-3">
+        <div class="mb-3">
+          <strong id="parentName">Parent</strong>
+          <div class="small text-muted" id="parentEmail"></div>
+        </div>
+        <ul class="nav flex-column" id="parentMenu">
+          <li class="nav-item"><a class="nav-link" href="#" data-widget="dashboard">Dashboard</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" data-widget="children">My Children</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" data-widget="fees">Fees</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" data-widget="messages">Messages</a></li>
+        </ul>
+      </aside>
+
+      <main class="col-md-10 p-4">
+        <div id="widgets">
+          <div id="dashboardWidget">
+            <h3>Welcome, <span id="greetName"></span></h3>
+            <p id="greetRole" class="text-muted">Parent Dashboard</p>
+
+            <div class="row">
+              <div class="col-md-4">
+                <div class="card p-3 mb-3">
+                  <div class="h6">Children</div>
+                  <div id="childrenCount" class="h4">0</div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card p-3 mb-3">
+                  <div class="h6">Unread Messages</div>
+                  <div id="msgCount" class="h4">0</div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card p-3 mb-3">
+                  <div class="h6">Fees Due</div>
+                  <div id="feesDue" class="h4">0</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="childrenWidget" class="d-none">
+            <h3>My Children</h3>
+            <div id="childrenList" class="list-group"></div>
+          </div>
+
+          <div id="feesWidget" class="d-none">
+            <h3>Fees</h3>
+            <div id="feesList" class="list-group"></div>
+          </div>
+
+          <div id="messagesWidget" class="d-none">
+            <h3>Messages</h3>
+            <div id="messagesList" class="list-group"></div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script>
+    const MASTER_JSON = 'data/master.json';
+    let master = null;
+    let lang = localStorage.getItem('mms_lang') || 'en';
+
+    function requireAuth() {
+      const token = sessionStorage.getItem('mms_token');
+      const user = JSON.parse(sessionStorage.getItem('mms_user') || 'null');
+      if (!token || !user || user.role !== 'parent') {
+        window.location.href = 'parent_password.html';
+        return null;
+      }
+      return user;
+    }
+
+    async function loadMaster() {
+      try {
+        const res = await fetch(MASTER_JSON);
+        master = await res.json();
+        render();
+      } catch (e) {
+        console.warn('master.json load failed', e);
+      }
+    }
+
+    function render() {
+      const user = requireAuth();
+      if (!user) return;
+      document.getElementById('parentName').textContent = user.displayName || user.id;
+      document.getElementById('parentEmail').textContent = user.email || '';
+      document.getElementById('greetName').textContent = user.displayName || user.id;
+
+      const parent = (master.roles?.parents || []).find(p => p.id === user.id) || {};
+      const children = (parent.children || []).map(cid => master.roles?.students?.find(s => s.id === cid)).filter(Boolean);
+
+      document.getElementById('childrenCount').textContent = children.length;
+      document.getElementById('msgCount').textContent = 0; // placeholder
+      const feesDue = children.reduce((sum, c) => {
+        const f = (master.dashboards?.sampleData?.fees || []).find(x => x.studentId === c.id);
+        return sum + (f && f.status === 'due' ? (f.amount || 0) : 0);
+      }, 0);
+      document.getElementById('feesDue').textContent = feesDue;
+
+      const childrenList = document.getElementById('childrenList');
+      childrenList.innerHTML = '';
+      children.forEach(c => {
+        const el = document.createElement('div');
+        el.className = 'list-group-item';
+        el.textContent = `${c.displayName} — Class: ${master.classes?.find(cl => cl.id === c.classId)?.name?.[lang] || ''}`;
+        childrenList.appendChild(el);
+      });
+
+      const feesList = document.getElementById('feesList');
+      feesList.innerHTML = '';
+      children.forEach(c => {
+        const f = (master.dashboards?.sampleData?.fees || []).find(x => x.studentId === c.id) || {status:'unknown', amount:0};
+        const el = document.createElement('div');
+        el.className = 'list-group-item';
+        el.textContent = `${c.displayName} — ${f.status} — ${f.amount || 0}`;
+        feesList.appendChild(el);
+      });
+
+      const messagesList = document.getElementById('messagesList');
+      messagesList.innerHTML = '';
+      // placeholder: no messages in master.json sample
+    }
+
+    // menu switching
+    document.getElementById('parentMenu').addEventListener('click', (e) => {
+      e.preventDefault();
+      const widget = e.target?.dataset?.widget;
+      if (!widget) return;
+      document.querySelectorAll('#widgets > div').forEach(d => d.classList.add('d-none'));
+      if (widget === 'dashboard') document.getElementById('dashboardWidget').classList.remove('d-none');
+      if (widget === 'children') document.getElementById('childrenWidget').classList.remove('d-none');
+      if (widget === 'fees') document.getElementById('feesWidget').classList.remove('d-none');
+      if (widget === 'messages') document.getElementById('messagesWidget').classList.remove('d-none');
+    });
+
+    // logout
+    document.getElementById('logoutBtn').addEventListener('click', () => {
+      sessionStorage.removeItem('mms_token');
+      sessionStorage.removeItem('mms_user');
+      window.location.href = 'parent_password.html';
+    });
+
+    // language
+    document.getElementById('langSelect').value = lang;
+    document.getElementById('langSelect').addEventListener('change', (e) => {
+      lang = e.target.value;
+      localStorage.setItem('mms_lang', lang);
+      if (lang === 'ar') document.documentElement.dir = 'rtl'; else document.documentElement.dir = 'ltr';
+    });
+
+    loadMaster();
+    if (lang === 'ar') document.documentElement.dir = 'rtl';
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

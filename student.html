@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Student Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>body{padding-top:70px}.sidebar{min-height:80vh}</style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-info fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Student</a>
+      <div class="d-flex align-items-center">
+        <select id="langSelect" class="form-select form-select-sm me-2" style="width:auto">
+          <option value="en">EN</option>
+          <option value="bn">BN</option>
+          <option value="ar">AR</option>
+        </select>
+        <button id="logoutBtn" class="btn btn-outline-light btn-sm">Logout</button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row">
+      <aside class="col-md-2 bg-light sidebar p-3">
+        <div class="mb-3">
+          <strong id="studentName">Student</strong>
+          <div class="small text-muted" id="studentEmail"></div>
+        </div>
+        <ul class="nav flex-column" id="studentMenu">
+          <li class="nav-item"><a class="nav-link" href="#" data-widget="dashboard">Dashboard</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" data-widget="attendance">Attendance</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" data-widget="progress">Progress</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" data-widget="fees">Fees</a></li>
+        </ul>
+      </aside>
+
+      <main class="col-md-10 p-4">
+        <div id="widgets">
+          <div id="dashboardWidget">
+            <h3>Welcome, <span id="greetName"></span></h3>
+            <p id="greetRole" class="text-muted">Student Dashboard</p>
+
+            <div class="row">
+              <div class="col-md-4">
+                <div class="card p-3 mb-3">
+                  <div class="h6">Class</div>
+                  <div id="className" class="h5">-</div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card p-3 mb-3">
+                  <div class="h6">Attendance</div>
+                  <div id="attendanceStatus" class="h5">-</div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card p-3 mb-3">
+                  <div class="h6">Fees</div>
+                  <div id="feesStatus" class="h5">-</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="attendanceWidget" class="d-none">
+            <h3>Attendance</h3>
+            <div id="attendanceList" class="list-group"></div>
+          </div>
+
+          <div id="progressWidget" class="d-none">
+            <h3>Progress</h3>
+            <div id="progressList" class="list-group"></div>
+          </div>
+
+          <div id="feesWidget" class="d-none">
+            <h3>Fees</h3>
+            <div id="feesList" class="list-group"></div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script>
+    const MASTER_JSON = 'data/master.json';
+    let master = null;
+    let lang = localStorage.getItem('mms_lang') || 'en';
+
+    function requireAuth() {
+      const token = sessionStorage.getItem('mms_token');
+      const user = JSON.parse(sessionStorage.getItem('mms_user') || 'null');
+      if (!token || !user || user.role !== 'student') {
+        window.location.href = 'student_password.html';
+        return null;
+      }
+      return user;
+    }
+
+    async function loadMaster() {
+      try {
+        const res = await fetch(MASTER_JSON);
+        master = await res.json();
+        render();
+      } catch (e) {
+        console.warn('master.json load failed', e);
+      }
+    }
+
+    function render() {
+      const user = requireAuth();
+      if (!user) return;
+      document.getElementById('studentName').textContent = user.displayName || user.id;
+      document.getElementById('studentEmail').textContent = user.email || '';
+      document.getElementById('greetName').textContent = user.displayName || user.id;
+
+      const student = (master.roles?.students || []).find(s => s.id === user.id) || {};
+      const classObj = master.classes?.find(c => c.id === student.classId) || {};
+      document.getElementById('className').textContent = classObj.name?.[lang] || classObj.name?.en || '-';
+
+      const fee = (master.dashboards?.sampleData?.fees || []).find(f => f.studentId === user.id) || {status:'unknown', amount:0};
+      document.getElementById('feesStatus').textContent = `${fee.status} ${fee.amount ? '— ' + fee.amount : ''}`;
+
+      // attendance & progress lists (sample)
+      const attendanceList = document.getElementById('attendanceList');
+      attendanceList.innerHTML = '';
+      (master.audit?.entries || []).filter(a => a.targetId === user.id || a.action === 'mark_attendance').forEach(a => {
+        const el = document.createElement('div');
+        el.className = 'list-group-item';
+        el.textContent = `${a.timestamp} — ${a.action} — ${a.notes || ''}`;
+        attendanceList.appendChild(el);
+      });
+
+      const progressList = document.getElementById('progressList');
+      progressList.innerHTML = '';
+      (master.audit?.entries || []).filter(a => a.targetId === user.id).forEach(a => {
+        const el = document.createElement('div');
+        el.className = 'list-group-item';
+        el.textContent = `${a.timestamp} — ${a.action} — ${a.notes || ''}`;
+        progressList.appendChild(el);
+      });
+
+      const feesList = document.getElementById('feesList');
+      feesList.innerHTML = '';
+      (master.dashboards?.sampleData?.fees || []).filter(f => f.studentId === user.id).forEach(f => {
+        const el = document.createElement('div');
+        el.className = 'list-group-item';
+        el.textContent = `Status: ${f.status} — Amount: ${f.amount || 0} — Due: ${f.dueDate || '-'}`;
+        feesList.appendChild(el);
+      });
+    }
+
+    // menu switching
+    document.getElementById('studentMenu').addEventListener('click', (e) => {
+      e.preventDefault();
+      const widget = e.target?.dataset?.widget;
+      if (!widget) return;
+      document.querySelectorAll('#widgets > div').forEach(d => d.classList.add('d-none'));
+      if (widget === 'dashboard') document.getElementById('dashboardWidget').classList.remove('d-none');
+      if (widget === 'attendance') document.getElementById('attendanceWidget').classList.remove('d-none');
+      if (widget === 'progress') document.getElementById('progressWidget').classList.remove('d-none');
+      if (widget === 'fees') document.getElementById('feesWidget').classList.remove('d-none');
+    });
+
+    // logout
+    document.getElementById('logoutBtn').addEventListener('click', () => {
+      sessionStorage.removeItem('mms_token');
+      sessionStorage.removeItem('mms_user');
+      window.location.href = 'student_password.html';
+    });
+
+    // language
+    document.getElementById('langSelect').value = lang;
+    document.getElementById('langSelect').addEventListener('change', (e) => {
+      lang = e.target.value;
+      localStorage.setItem('mms_lang', lang);
+      if (lang === 'ar') document.documentElement.dir = 'rtl'; else document.documentElement.dir = 'ltr';
+    });
+
+    loadMaster();
+    if (lang === 'ar') document.documentElement.dir = 'rtl';
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
