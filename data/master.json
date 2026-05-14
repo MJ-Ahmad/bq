@@ -2,9 +2,9 @@
   "meta": {
     "institutionId": "BQ-001",
     "institutionName": {
-      "en": "Baitul Quran International Madrasha",
-      "bn": "বাইতুল কোরআন ইন্টারন্যাশনাল মাদ্রাসা",
-      "ar": "بيت القرآن الدولي المدرسة"
+      "en": "Baitul Quran",
+      "bn": "বাইতুল কোরআন",
+      "ar": "بيت القرآن"
     },
     "languages": ["en", "bn", "ar"],
     "defaultLanguage": "en",
@@ -176,9 +176,9 @@
   },
   "public": {
     "about": {
-      "en": "Baitul Quran International Madrasha — Empowering education with technology. English, Bangla & Arabic support.",
-      "bn": "বাইতুল কোরআন ইন্টারন্যাশনাল মাদ্রাসা — প্রযুক্তির মাধ্যমে শিক্ষা শক্তিশালী করা। ইংরেজি, বাংলা ও আরবি সমর্থন।",
-      "ar": "بيت القرآن الدولي المدرسة — تمكين التعليم بالتكنولوجيا. دعم الإنجليزية والبنغالية والعربية."
+      "en": "Baitul Quran.",
+      "bn": "বাইতুল কোরআন।",
+      "ar": "بيت القرآن ."
     },
     "announcements": [
       {"id":"a1","title":{"en":"Admission open for 2026 session","bn":"২০২৬ সেশনের ভর্তি চলছে","ar":"القبول مفتوح للفصل 2026"},"date":"2026-05-01"},
