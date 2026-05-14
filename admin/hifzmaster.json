@@ -1,0 +1,482 @@
+{
+  "localization": {
+  "en": {
+    "teachers": "Teachers",
+    "groups": "Groups",
+    "select_prompt": "Click a teacher or student name",
+    "start_date": "Start Date",
+    "ustad": "Ustad",
+    "completed_paras": "Completed Paras",
+    "current_para": "Current Para",
+    "today_sabaq": "Today's Sabaq",
+    "tomorrow_prep": "Tomorrow's Prep",
+    "progress_30para": "30‑Para Progress",
+    "legend": "Legend",
+    "memorized": "Memorized",
+    "taught_today": "Taught Today",
+    "planned": "Planned",
+    "no_activity": "No recent activity",
+    "export_json": "Export JSON"
+  },
+  "bn": {
+    "teachers": "শিক্ষকগণ",
+    "groups": "গ্রুপসমূহ",
+    "select_prompt": "শিক্ষক বা শিক্ষার্থীর নাম ক্লিক করুন",
+    "start_date": "শুরু তারিখ",
+    "ustad": "উস্তাদ",
+    "completed_paras": "মুখস্থ পারা",
+    "current_para": "বর্তমান পারা",
+    "today_sabaq": "আজকের সাবাক",
+    "tomorrow_prep": "আগামীকালের প্রস্তুতি",
+    "progress_30para": "৩০ পারা অগ্রগতি",
+    "legend": "লেজেন্ড",
+    "memorized": "মুখস্থ",
+    "taught_today": "আজ শেখানো",
+    "planned": "পরিকল্পিত",
+    "no_activity": "কোনো সাম্প্রতিক কার্যকলাপ নেই",
+    "export_json": "JSON ডাউনলোড"
+  },
+  "ar": {
+    "teachers": "المعلمون",
+    "groups": "المجموعات",
+    "select_prompt": "انقر اسم المعلم أو الطالب",
+    "start_date": "تاريخ البدء",
+    "ustad": "الأستاذ",
+    "completed_paras": "الأجزاء المحفوظة",
+    "current_para": "الجزء الحالي",
+    "today_sabaq": "درس اليوم",
+    "tomorrow_prep": "تحضير الغد",
+    "progress_30para": "تقدم 30 جزء",
+    "legend": "مفتاح الألوان",
+    "memorized": "محفوظ",
+    "taught_today": "تم تدريسه اليوم",
+    "planned": "مخطط",
+    "no_activity": "لا توجد أنشطة حديثة",
+    "export_json": "تنزيل JSON"
+  }
+ },
+   "Hifz-Tracker1": {
+    "Teachers": [
+      { "name": "Ustad Arif", "phone": "01824401812", "role": "Ustad" },
+      { "name": "Ustad Arif Robbani", "phone": "01631940605", "role": "Ustad" },
+      { "name": "Ustad Jafor", "phone": "01892051303", "role": "Ustad" }
+    ],
+    "Groups": [
+      {
+        "ustad": "Ustad Jafor Ahmad",
+        "group": "A",
+        "students": [
+           {
+  "name": "Faysal (1)",
+  "roll": "03",
+  "id": "BQSHK01",
+  "department": "Khatmi",
+  "start_date": "2025-09-01",
+  "completed_paras": ["28","29","30"],
+  "current_para": "27",
+  "today_sabaq": "Pages 1–4",
+  "tomorrow_prep": "Pages 5–10",
+  "target_date": "2026-05-24",
+  "today_pages": [1,2,3,4],                
+  "tomorrow_pages": [5,6,7,8,9,10],       
+  "amukta_ranges": [                   
+    { "from_page": 1, "to_page": 4, "date": "2026-05-09" }
+  ],
+  "activity": [
+    "2026-05-10: Completed para 30 review",
+    "2026-05-09: Recited para 29"
+  ]
+},
+          {
+            "name": "Sown",
+            "roll": "04",
+            "id": "BQSHK02",
+            "department": "Khatmi",
+            "start_date": "2025-10-05",
+            "completed_paras": ["2","3"],
+            "current_para": "1",
+            "today_sabaq": "Pages 10–12",
+            "tomorrow_prep": "Pages 13–15",
+            "target_date": "2026-05-24",
+            "activity": ["Revision para 3 (2026-05-09)"]
+          },
+          {
+            "name": "Abu Talha",
+            "roll": "05",
+            "id": "BQSHK03",
+            "department": "Khatmi",
+            "start_date": "2025-11-01",
+            "completed_paras": ["2","3"],
+            "current_para": "1",
+            "today_sabaq": "Pages 8–9",
+            "tomorrow_prep": "Pages 10–12",
+            "target_date": "2026-05-24",
+            "activity": []
+          },
+          {
+            "name": "Abdullah Al Mahi",
+            "roll": "06",
+            "id": "BQSHK04",
+            "department": "Khatmi",
+            "start_date": "2025-08-20",
+            "completed_paras": ["1","29","30"],
+            "current_para": "28",
+            "today_sabaq": "Pages 200–202",
+            "tomorrow_prep": "Pages 203–208",
+            "target_date": "2026-05-24",
+            "activity": ["Completed para 30 final review (2026-05-08)"]
+          },
+          { "name": "Faysal (2)", "roll": "07", "id": "BQSHK05", "department": "Khatmi", "start_date": "2026-01-15", "completed_paras": [], "current_para": "—", "today_sabaq": "—", "tomorrow_prep": "—" },
+          {
+            "name": "Jarif",
+            "roll": "08",
+            "id": "BQSHK06",
+            "department": "Khatmi",
+            "start_date": "2025-09-10",
+            "completed_paras": ["1","29"],
+            "current_para": "2",
+            "today_sabaq": "Pages 20–22",
+            "tomorrow_prep": "Pages 23–25",
+            "target_date": "2026-05-24",
+            "activity": []
+          },
+          {
+            "name": "Asif",
+            "roll": "09",
+            "id": "BQSHK07",
+            "department": "Khatmi",
+            "start_date": "2025-10-01",
+            "completed_paras": ["1","2"],
+            "current_para": "3",
+            "today_sabaq": "Pages 30–32",
+            "tomorrow_prep": "Pages 33–35",
+            "target_date": "2026-05-24",
+            "activity": []
+          },
+          {
+            "name": "Jihad",
+            "roll": "10",
+            "id": "BQSHK08",
+            "department": "Khatmi",
+            "start_date": "2025-07-20",
+            "completed_paras": ["28","29","30"],
+            "current_para": "27",
+            "today_sabaq": "Pages 1–4",
+            "tomorrow_prep": "Pages 5–10",
+            "target_date": "2026-05-24",
+            "activity": []
+          },
+          {
+            "name": "Sakib",
+            "roll": "11",
+            "id": "BQSHK09",
+            "department": "Khatmi",
+            "start_date": "2025-11-05",
+            "completed_paras": ["1","3"],
+            "current_para": "2",
+            "today_sabaq": "Pages 12–14",
+            "tomorrow_prep": "Pages 15–17",
+            "target_date": "2026-05-24",
+            "activity": []
+          },
+          {
+            "name": "Tawfiq",
+            "roll": "12",
+            "id": "BQSHK10",
+            "department": "Khatmi",
+            "start_date": "2025-09-25",
+            "completed_paras": ["1","2","3"],
+            "current_para": "4",
+            "today_sabaq": "Pages 40–44",
+            "tomorrow_prep": "Pages 45–48",
+            "target_date": "2026-05-24",
+            "activity": []
+          },
+          {
+            "name": "Mosaddek",
+            "roll": "31",
+            "id": "BQSHK11",
+            "department": "Khatmi",
+            "start_date": "2025-12-01",
+            "completed_paras": ["1","2"],
+            "current_para": "3",
+            "today_sabaq": "Pages 50–52",
+            "tomorrow_prep": "Pages 53–55",
+            "target_date": "2026-05-22",
+            "activity": []
+          },
+          {
+            "name": "Riyad Ahmad",
+            "roll": "pending",
+            "id": "pending",
+            "department": "Khatmi",
+            "start_date": "2026-03-01",
+            "completed_paras": [],
+            "current_para": "1",
+            "today_sabaq": "Pages 1–2",
+            "tomorrow_prep": "Pages 3–4",
+            "target_date": "2026-05-24",
+            "activity": []
+          },
+          {
+            "name": "Shafin",
+            "roll": "pending",
+            "id": "pending",
+            "department": "Khatmi",
+            "start_date": "2026-04-01",
+            "completed_paras": [],
+            "current_para": "26",
+            "today_sabaq": "Pages 300–304",
+            "tomorrow_prep": "Pages 305–308",
+            "target_date": "2026-05-24",
+            "activity": []
+          },
+          {
+            "name": "Junayed bin Ali",
+            "roll": "pending",
+            "id": "BQSHS17",
+            "department": "Sabaki",
+            "start_date": "2026-02-15",
+            "completed_paras": [],
+            "current_para": "—",
+            "today_sabaq": "—",
+            "tomorrow_prep": "—",
+            "activity": []
+          },
+          {
+            "name": "Afrad",
+            "roll": "19",
+            "id": "BQSHS03",
+            "department": "Sabaki",
+            "start_date": "2025-06-01",
+            "completed_paras": ["25","26","27","28","29","30"],
+            "current_para": "1",
+            "today_sabaq": "Pages 1–4",
+            "tomorrow_prep": "Pages 5–6",
+            "target_date": "2026-05-24",
+            "activity": ["Today taught pages 1–4","Sabaq completed 4 pages (2026-05-09)"]
+          },
+          {
+            "name": "Akib",
+            "roll": "28",
+            "id": "BQSHS07",
+            "department": "Sabaki",
+            "start_date": "2025-05-10",
+            "completed_paras": ["23","24","25","26","27","28","29","30"],
+            "current_para": "1",
+            "today_sabaq": "Pages 6–10",
+            "tomorrow_prep": "Pages 11–12",
+            "target_date": "2026-05-24",
+            "activity": ["Today taught page 6 (2026-05-09)"]
+          },
+          {
+            "name": "Jubayer",
+            "roll": "01",
+            "id": "BQSHS01",
+            "department": "Sabaki",
+            "start_date": "2025-04-01",
+            "completed_paras": [],
+            "current_para": "—",
+            "today_sabaq": "—",
+            "tomorrow_prep": "—",
+            "activity": []
+          },
+          {
+            "name": "Rafid",
+            "roll": "pending",
+            "id": "pending",
+            "department": "Sabaki",
+            "start_date": "2026-03-10",
+            "completed_paras": [],
+            "current_para": "—",
+            "today_sabaq": "—",
+            "tomorrow_prep": "—",
+            "activity": []
+          },
+          {
+            "name": "Abid",
+            "roll": "21",
+            "id": "BQSHS05",
+            "department": "Sabaki",
+            "start_date": "2025-07-01",
+            "completed_paras": [],
+            "current_para": "—",
+            "today_sabaq": "—",
+            "tomorrow_prep": "—",
+            "activity": []
+          },
+          {
+            "name": "Kawser Ahmad",
+            "roll": "02",
+            "id": "BQSNA02",
+            "department": "Nazara",
+            "start_date": "2025-08-01",
+            "completed_paras": [],
+            "current_para": "—",
+            "today_sabaq": "—",
+            "tomorrow_prep": "—",
+            "activity": []
+          },
+          {
+            "name": "Sahinur",
+            "roll": "04",
+            "id": "BQSNA04",
+            "department": "Nazara",
+            "start_date": "2025-08-05",
+            "completed_paras": [],
+            "current_para": "—",
+            "today_sabaq": "—",
+            "tomorrow_prep": "—",
+            "activity": []
+          },
+          {
+            "name": "Rafan",
+            "roll": "08",
+            "id": "BQSNA08",
+            "department": "Nazara",
+            "start_date": "2025-09-01",
+            "completed_paras": [],
+            "current_para": "—",
+            "today_sabaq": "—",
+            "tomorrow_prep": "—",
+            "activity": []
+          },
+          {
+            "name": "Meraj",
+            "roll": "05",
+            "id": "BQSNA05",
+            "department": "Nazara",
+            "start_date": "2025-09-10",
+            "completed_paras": [],
+            "current_para": "—",
+            "today_sabaq": "—",
+            "tomorrow_prep": "—",
+            "activity": []
+          }
+        ]
+      },
+      {
+        "ustad": "Ustad Arif",
+        "group": "B",
+        "students": [
+          { "name": "Sabbir", "roll": "17", "id": "BQSHS02", "department": "Sabaki", "start_date": "2025-05-01", "completed_paras": [], "current_para": "—", "today_sabaq": "—", "tomorrow_prep": "—", "activity": [] },
+          { "name": "Rahat", "roll": "20", "id": "BQSHS04", "department": "Sabaki", "start_date": "2025-05-05", "completed_paras": [], "current_para": "—", "today_sabaq": "—", "tomorrow_prep": "—", "activity": [] },
+          { "name": "Arafat (2)", "roll": "22", "id": "BQSHS06", "department": "Sabaki", "start_date": "2025-06-01", "completed_paras": [], "current_para": "—", "today_sabaq": "—", "tomorrow_prep": "—", "activity": [] },
+          { "name": "Akib", "roll": "28", "id": "BQSHS07", "department": "Sabaki", "start_date": "2025-05-10", "completed_paras": ["23","24","25","26","27","28","29","30"], "current_para": "1", "today_sabaq": "Pages 6–6", "tomorrow_prep": "Pages 7–8", "activity": [] },
+          { "name": "Amir Hamja", "roll": "29", "id": "BQSHS08", "department": "Sabaki", "start_date": "2025-06-10", "completed_paras": [], "current_para": "—", "today_sabaq": "—", "tomorrow_prep": "—", "activity": [] },
+          { "name": "Nabil", "roll": "30", "id": "BQSHS09", "department": "Sabaki", "start_date": "2025-06-15", "completed_paras": [], "current_para": "—", "today_sabaq": "—", "tomorrow_prep": "—", "activity": [] },
+          { "name": "Mafin", "roll": "13", "id": "BQSHS11", "department": "Sabaki", "start_date": "2025-07-01", "completed_paras": [], "current_para": "—", "today_sabaq": "—", "tomorrow_prep": "—", "activity": [] },
+          { "name": "Hasib", "roll": "14", "id": "BQSHS12", "department": "Sabaki", "start_date": "2025-07-05", "completed_paras": [], "current_para": "—", "today_sabaq": "—", "tomorrow_prep": "—", "activity": [] },
+          { "name": "Sahadat", "roll": "15", "id": "BQSHS13", "department": "Sabaki", "start_date": "2025-07-10", "completed_paras": [], "current_para": "—", "today_sabaq": "—", "tomorrow_prep": "—", "activity": [] },
+          { "name": "Hujayfa", "roll": "18", "id": "BQSHS14", "department": "Sabaki", "start_date": "2025-07-20", "completed_paras": [], "current_para": "—", "today_sabaq": "—", "tomorrow_prep": "—", "activity": [] },
+          { "name": "Al-Amin", "roll": "25", "id": "BQSHS15", "department": "Sabaki", "start_date": "2025-08-01", "completed_paras": [], "current_para": "—", "today_sabaq": "—", "tomorrow_prep": "—", "activity": [] },
+          { "name": "Junayed", "roll": "33", "id": "BQSHS10", "department": "Sabaki", "start_date": "2025-08-10", "completed_paras": [], "current_para": "—", "today_sabaq": "—", "tomorrow_prep": "—", "activity": [] },
+          { "name": "Anamul Haqe", "roll": "02", "id": "BQSHS18", "department": "Sabaki", "start_date": "2025-08-20", "completed_paras": [], "current_para": "—", "today_sabaq": "—", "tomorrow_prep": "—", "activity": [] },
+          { "name": "Arafat (1)", "roll": "16", "id": "BQSHS19", "department": "Sabaki", "start_date": "2025-09-01", "completed_paras": [], "current_para": "—", "today_sabaq": "—", "tomorrow_prep": "—", "activity": [] },
+          { "name": "Sayem", "roll": "26", "id": "BQSHS20", "department": "Sabaki", "start_date": "2025-09-10", "completed_paras": [], "current_para": "—", "today_sabaq": "—", "tomorrow_prep": "—", "activity": [] },
+          { "name": "Tahmid", "roll": "27", "id": "BQSHS21", "department": "Sabaki", "start_date": "2025-09-20", "completed_paras": [], "current_para": "—", "today_sabaq": "—", "tomorrow_prep": "—", "activity": [] },
+          { "name": "Abu Talha", "roll": "01", "id": "BQSNA01", "department": "Nazara", "start_date": "2025-10-01", "completed_paras": [], "current_para": "—", "today_sabaq": "—", "tomorrow_prep": "—", "activity": [] },
+          { "name": "Sifat", "roll": "03", "id": "BQSNA03", "department": "Nazara", "start_date": "2025-10-05", "completed_paras": [], "current_para": "—", "today_sabaq": "—", "tomorrow_prep": "—", "activity": [] },
+          { "name": "Minhaz", "roll": "06", "id": "BQSNA06", "department": "Nazara", "start_date": "2025-10-10", "completed_paras": [], "current_para": "—", "today_sabaq": "—", "tomorrow_prep": "—", "activity": [] },
+          { "name": "Lijon", "roll": "07", "id": "BQSNA07", "department": "Nazara", "start_date": "2025-10-15", "completed_paras": [], "current_para": "—", "today_sabaq": "—", "tomorrow_prep": "—", "activity": [] },
+          { "name": "Arshad", "roll": "09", "id": "BQSNA09", "department": "Nazara", "start_date": "2025-10-20", "completed_paras": [], "current_para": "—", "today_sabaq": "—", "tomorrow_prep": "—", "activity": [] }
+        ]
+      },
+      {
+        "ustad": "Ustad Arif Robbani",
+        "group": "C",
+        "students": [
+          { "name": "Jidan", "roll": "01", "id": "BQSNU01", "department": "Nurani", "start_date": "2025-11-01", "completed_paras": [], "current_para": "—", "today_sabaq": "—", "tomorrow_prep": "—", "activity": [] },
+          { "name": "Safan", "roll": "02", "id": "BQSNU02", "department": "Nurani", "start_date": "2025-11-05", "completed_paras": [], "current_para": "—", "today_sabaq": "—", "tomorrow_prep": "—", "activity": [] },
+          { "name": "Moballig", "roll": "03", "id": "BQSNU03", "department": "Nurani", "start_date": "2025-11-10", "completed_paras": [], "current_para": "—", "today_sabaq": "—", "tomorrow_prep": "—", "activity": [] },
+          { "name": "Shoyaib", "roll": "04", "id": "BQSNU04", "department": "Nurani", "start_date": "2025-11-15", "completed_paras": [], "current_para": "—", "today_sabaq": "—", "tomorrow_prep": "—", "activity": [] },
+          { "name": "Sajjad", "roll": "05", "id": "BQSNU05", "department": "Nurani", "start_date": "2025-11-20", "completed_paras": [], "current_para": "—", "today_sabaq": "—", "tomorrow_prep": "—", "activity": [] },
+          { "name": "Tamim", "roll": "06", "id": "BQSNU06", "department": "Nurani", "start_date": "2025-11-25", "completed_paras": [], "current_para": "—", "today_sabaq": "—", "tomorrow_prep": "—", "activity": [] },
+          { "name": "Ruman", "roll": "07", "id": "BQSNU07", "department": "Nurani", "start_date": "2025-12-01", "completed_paras": [], "current_para": "—", "today_sabaq": "—", "tomorrow_prep": "—", "activity": [] },
+          { "name": "Mahdi", "roll": "08", "id": "BQSNU08", "department": "Nurani", "start_date": "2025-12-05", "completed_paras": [], "current_para": "—", "today_sabaq": "—", "tomorrow_prep": "—", "activity": [] },
+          { "name": "Soyad", "roll": "09", "id": "BQSNU09", "department": "Nurani", "start_date": "2025-12-10", "completed_paras": [], "current_para": "—", "today_sabaq": "—", "tomorrow_prep": "—", "activity": [] }
+        ]
+      }
+    ]
+  },
+    "Hifz-Tracker": {
+    "Teachers": [
+      { "name": "Ustad Arif", "phone": "01824401812", "role": "Ustad" },
+      { "name": "Ustad Arif Robbani", "phone": "01631940605", "role": "Ustad" },
+      { "name": "Ustad Jafor", "phone": "01892051303", "role": "Ustad" }
+    ],
+    "Groups": [
+      {
+        "ustad": "Ustad Jafor Ahmad",
+        "group": "A",
+        "students": [
+          { "name": "Faysal (1)", "roll": "03", "id": "BQSHK01", "department": "Khatmi", "start_date":"2025-09-01", "completed_paras":["28","29","30"], "current_para":"27", "today_sabaq":"Pages 1–4", "tomorrow_prep":"Pages 5–10", "target_date":"2026-05-24", "today_pages":[1,2,3,4], "activity":["2026-05-10: Completed para 30 review","2026-05-09: Recited para 29"] },
+          { "name": "Sown", "roll": "04", "id": "BQSHK02", "department": "Khatmi", "start_date":"2025-10-05", "completed_paras":["2","3"], "current_para":"1", "today_sabaq":"Pages 10–12", "tomorrow_prep":"Pages 13–15", "target_date":"2026-05-24", "today_pages":[10,11,12], "activity":["2026-05-09: Revision para 3"] },
+          { "name": "Abu Talha", "roll": "05", "id": "BQSHK03", "department": "Khatmi", "start_date":"2025-11-01", "completed_paras":["2","3"], "current_para":"1", "today_sabaq":"Pages 8–9", "tomorrow_prep":"Pages 10–12", "target_date":"2026-05-24", "today_pages":[8,9], "activity":[] },
+          { "name": "Abdullah Al Mahi", "roll": "06", "id": "BQSHK04", "department": "Khatmi", "start_date":"2025-08-20", "completed_paras":["1","29","30"], "current_para":"28", "today_sabaq":"Pages 200–202", "tomorrow_prep":"Pages 203–208", "target_date":"2026-05-24", "today_pages":[200,201,202], "activity":["2026-05-08: Completed para 30 final review"] },
+          { "name": "Faysal (2)", "roll": "07", "id": "BQSHK05", "department": "Khatmi", "start_date":"2026-01-15", "completed_paras":[], "current_para":"—", "today_sabaq":"—", "tomorrow_prep":"—", "activity":[] },
+          { "name": "Jarif", "roll": "08", "id": "BQSHK06", "department": "Khatmi", "start_date":"2025-09-10", "completed_paras":["1","29"], "current_para":"2", "today_sabaq":"Pages 20–22", "tomorrow_prep":"Pages 23–25", "target_date":"2026-05-24", "today_pages":[20,21,22], "activity":[] },
+          { "name": "Asif", "roll": "09", "id": "BQSHK07", "department": "Khatmi", "start_date":"2025-10-01", "completed_paras":["1","2"], "current_para":"3", "today_sabaq":"Pages 30–32", "tomorrow_prep":"Pages 33–35", "target_date":"2026-05-24", "today_pages":[30,31,32], "activity":[] },
+          { "name": "Jihad", "roll": "10", "id": "BQSHK08", "department": "Khatmi", "start_date":"2025-07-20", "completed_paras":["28","29","30"], "current_para":"27", "today_sabaq":"Pages 1–4", "tomorrow_prep":"Pages 5–10", "target_date":"2026-05-24", "today_pages":[1,2,3,4], "activity":[] },
+          { "name": "Sakib", "roll": "11", "id": "BQSHK09", "department": "Khatmi", "start_date":"2025-11-05", "completed_paras":["1","3"], "current_para":"2", "today_sabaq":"Pages 12–14", "tomorrow_prep":"Pages 15–17", "target_date":"2026-05-24", "today_pages":[12,13,14], "activity":[] },
+          { "name": "Tawfiq", "roll": "12", "id": "BQSHK10", "department": "Khatmi", "start_date":"2025-09-25", "completed_paras":["1","2","3"], "current_para":"4", "today_sabaq":"Pages 40–44", "tomorrow_prep":"Pages 45–48", "target_date":"2026-05-24", "today_pages":[40,41,42,43,44], "activity":[] },
+          { "name": "Mosaddek", "roll": "31", "id": "BQSHK11", "department": "Khatmi", "start_date":"2025-12-01", "completed_paras":["1","2"], "current_para":"3", "today_sabaq":"Pages 50–52", "tomorrow_prep":"Pages 53–55", "target_date":"2026-05-24", "today_pages":[50,51,52], "activity":[] },
+          { "name": "Riyad Ahmad", "roll": "pending", "id": "pending", "department": "Khatmi", "start_date":"2026-03-01", "completed_paras":[], "current_para":"1", "today_sabaq":"Pages 1–2", "tomorrow_prep":"Pages 3–4", "target_date":"2026-05-24", "today_pages":[1,2], "activity":[] },
+          { "name": "Shafin", "roll": "pending", "id": "pending", "department": "Khatmi", "start_date":"2026-04-01", "completed_paras":[], "current_para":"26", "today_sabaq":"Pages 300–304", "tomorrow_prep":"Pages 305–308", "target_date":"2026-05-24", "today_pages":[300,301,302,303,304], "activity":[] },
+          { "name": "Junayed bin Ali", "roll": "pending", "id": "BQSHS17", "department": "Sabaki", "start_date":"2026-02-15", "completed_paras":[], "current_para":"—", "today_sabaq":"—", "tomorrow_prep":"—", "activity":[] },
+          { "name": "Afrad", "roll": "19", "id": "BQSHS03", "department": "Sabaki", "start_date":"2025-06-01", "completed_paras":["25","26","27","28","29","30"], "current_para":"1", "today_sabaq":"Pages 1–4", "tomorrow_prep":"Pages 5–6", "target_date":"2026-05-24", "today_pages":[1,2,3,4], "activity":["2026-05-09: Today taught pages 1–4","2026-05-09: Sabaq completed 4 pages"] },
+          { "name": "Akib", "roll": "28", "id": "BQSHS07", "department": "Sabaki", "start_date":"2025-05-10", "completed_paras":["23","24","25","26","27","28","29","30"], "current_para":"1", "today_sabaq":"Pages 6–6", "tomorrow_prep":"Pages 7–8", "target_date":"2026-05-24", "today_pages":[6], "activity":["2026-05-09: Today taught page 6"] },
+          { "name": "Jubayer", "roll": "01", "id": "BQSHS01", "department": "Sabaki", "start_date":"2025-04-01", "completed_paras":[], "current_para":"—", "today_sabaq":"—", "tomorrow_prep":"—", "activity":[] },
+          { "name": "Rafid", "roll": "pending", "id": "pending", "department": "Sabaki", "start_date":"2026-03-10", "completed_paras":[], "current_para":"—", "today_sabaq":"—", "tomorrow_prep":"—", "activity":[] },
+          { "name": "Abid", "roll": "21", "id": "BQSHS05", "department": "Sabaki", "start_date":"2025-07-01", "completed_paras":[], "current_para":"—", "today_sabaq":"—", "tomorrow_prep":"—", "activity":[] },
+          { "name": "Kawser Ahmad", "roll": "02", "id": "BQSNA02", "department": "Nazara", "start_date":"2025-08-01", "completed_paras":[], "current_para":"—", "today_sabaq":"—", "tomorrow_prep":"—", "activity":[] },
+          { "name": "Sahinur", "roll": "04", "id": "BQSNA04", "department": "Nazara", "start_date":"2025-08-05", "completed_paras":[], "current_para":"—", "today_sabaq":"—", "tomorrow_prep":"—", "activity":[] },
+          { "name": "Rafan", "roll": "08", "id": "BQSNA08", "department": "Nazara", "start_date":"2025-09-01", "completed_paras":[], "current_para":"—", "today_sabaq":"—", "tomorrow_prep":"—", "activity":[] },
+          { "name": "Meraj", "roll": "05", "id": "BQSNA05", "department": "Nazara", "start_date":"2025-09-10", "completed_paras":[], "current_para":"—", "today_sabaq":"—", "tomorrow_prep":"—", "activity":[] }
+        ]
+      },
+      {
+        "ustad": "Ustad Arif",
+        "group": "B",
+        "students": [
+          { "name": "Sabbir", "roll": "17", "id": "BQSHS02", "department": "Sabaki", "start_date":"2025-05-01", "completed_paras":[], "current_para":"—", "today_sabaq":"—", "tomorrow_prep":"—", "activity":[] },
+          { "name": "Rahat", "roll": "20", "id": "BQSHS04", "department": "Sabaki", "start_date":"2025-05-05", "completed_paras":[], "current_para":"—", "today_sabaq":"—", "tomorrow_prep":"—", "activity":[] },
+          { "name": "Arafat (2)", "roll": "22", "id": "BQSHS06", "department": "Sabaki", "start_date":"2025-06-01", "completed_paras":[], "current_para":"—", "today_sabaq":"—", "tomorrow_prep":"—", "activity":[] },
+          { "name": "Akib", "roll": "28", "id": "BQSHS07", "department": "Sabaki", "start_date":"2025-05-10", "completed_paras":["23","24","25","26","27","28","29","30"], "current_para":"1", "today_sabaq":"Pages 6–6", "tomorrow_prep":"Pages 7–8", "activity":[] },
+          { "name": "Amir Hamja", "roll": "29", "id": "BQSHS08", "department": "Sabaki", "start_date":"2025-06-10", "completed_paras":[], "current_para":"—", "today_sabaq":"—", "tomorrow_prep":"—", "activity":[] },
+          { "name": "Nabil", "roll": "30", "id": "BQSHS09", "department": "Sabaki", "start_date":"2025-06-15", "completed_paras":[], "current_para":"—", "today_sabaq":"—", "tomorrow_prep":"—", "activity":[] },
+          { "name": "Mafin", "roll": "13", "id": "BQSHS11", "department": "Sabaki", "start_date":"2025-07-01", "completed_paras":[], "current_para":"—", "today_sabaq":"—", "tomorrow_prep":"—", "activity":[] },
+          { "name": "Hasib", "roll": "14", "id": "BQSHS12", "department": "Sabaki", "start_date":"2025-07-05", "completed_paras":[], "current_para":"—", "today_sabaq":"—", "tomorrow_prep":"—", "activity":[] },
+          { "name": "Sahadat", "roll": "15", "id": "BQSHS13", "department": "Sabaki", "start_date":"2025-07-10", "completed_paras":[], "current_para":"—", "today_sabaq":"—", "tomorrow_prep":"—", "activity":[] },
+          { "name": "Hujayfa", "roll": "18", "id": "BQSHS14", "department": "Sabaki", "start_date":"2025-07-20", "completed_paras":[], "current_para":"—", "today_sabaq":"—", "tomorrow_prep":"—", "activity":[] },
+          { "name": "Al-Amin", "roll": "25", "id": "BQSHS15", "department": "Sabaki", "start_date":"2025-08-01", "completed_paras":[], "current_para":"—", "today_sabaq":"—", "tomorrow_prep":"—", "activity":[] },
+          { "name": "Junayed", "roll": "33", "id": "BQSHS10", "department": "Sabaki", "start_date":"2025-08-10", "completed_paras":[], "current_para":"—", "today_sabaq":"—", "tomorrow_prep":"—", "activity":[] },
+          { "name": "Anamul Haqe", "roll": "02", "id": "BQSHS18", "department": "Sabaki", "start_date":"2025-08-20", "completed_paras":[], "current_para":"—", "today_sabaq":"—", "tomorrow_prep":"—", "activity":[] },
+          { "name": "Arafat (1)", "roll": "16", "id": "BQSHS19", "department": "Sabaki", "start_date":"2025-09-01", "completed_paras":[], "current_para":"—", "today_sabaq":"—", "tomorrow_prep":"—", "activity":[] },
+          { "name": "Sayem", "roll": "26", "id": "BQSHS20", "department": "Sabaki", "start_date":"2025-09-10", "completed_paras":[], "current_para":"—", "today_sabaq":"—", "tomorrow_prep":"—", "activity":[] },
+          { "name": "Tahmid", "roll": "27", "id": "BQSHS21", "department": "Sabaki", "start_date":"2025-09-20", "completed_paras":[], "current_para":"—", "today_sabaq":"—", "tomorrow_prep":"—", "activity":[] },
+          { "name": "Abu Talha", "roll": "01", "id": "BQSNA01", "department": "Nazara", "start_date":"2025-10-01", "completed_paras":[], "current_para":"—", "today_sabaq":"—", "tomorrow_prep":"—", "activity":[] },
+          { "name": "Sifat", "roll": "03", "id": "BQSNA03", "department": "Nazara", "start_date":"2025-10-05", "completed_paras":[], "current_para":"—", "today_sabaq":"—", "tomorrow_prep":"—", "activity":[] },
+          { "name": "Minhaz", "roll": "06", "id": "BQSNA06", "department": "Nazara", "start_date":"2025-10-10", "completed_paras":[], "current_para":"—", "today_sabaq":"—", "tomorrow_prep":"—", "activity":[] },
+          { "name": "Lijon", "roll": "07", "id": "BQSNA07", "department": "Nazara", "start_date":"2025-10-15", "completed_paras":[], "current_para":"—", "today_sabaq":"—", "tomorrow_prep":"—", "activity":[] },
+          { "name": "Arshad", "roll": "09", "id": "BQSNA09", "department": "Nazara", "start_date":"2025-10-20", "completed_paras":[], "current_para":"—", "today_sabaq":"—", "tomorrow_prep":"—", "activity":[] }
+        ]
+      },
+      {
+        "ustad": "Ustad Arif Robbani",
+        "group": "C",
+        "students": [
+          { "name": "Jidan", "roll": "01", "id": "BQSNU01", "department": "Nurani", "start_date":"2025-11-01", "completed_paras":[], "current_para":"—", "today_sabaq":"—", "tomorrow_prep":"—", "activity":[] },
+          { "name": "Safan", "roll": "02", "id": "BQSNU02", "department": "Nurani", "start_date":"2025-11-05", "completed_paras":[], "current_para":"—", "today_sabaq":"—", "tomorrow_prep":"—", "activity":[] },
+          { "name": "Moballig", "roll": "03", "id": "BQSNU03", "department": "Nurani", "start_date":"2025-11-10", "completed_paras":[], "current_para":"—", "today_sabaq":"—", "tomorrow_prep":"—", "activity":[] },
+          { "name": "Shoyaib", "roll": "04", "id": "BQSNU04", "department": "Nurani", "start_date":"2025-11-15", "completed_paras":[], "current_para":"—", "today_sabaq":"—", "tomorrow_prep":"—", "activity":[] },
+          { "name": "Sajjad", "roll": "05", "id": "BQSNU05", "department": "Nurani", "start_date":"2025-11-20", "completed_paras":[], "current_para":"—", "today_sabaq":"—", "tomorrow_prep":"—", "activity":[] },
+          { "name": "Tamim", "roll": "06", "id": "BQSNU06", "department": "Nurani", "start_date":"2025-11-25", "completed_paras":[], "current_para":"—", "today_sabaq":"—", "tomorrow_prep":"—", "activity":[] },
+          { "name": "Ruman", "roll": "07", "id": "BQSNU07", "department": "Nurani", "start_date":"2025-12-01", "completed_paras":[], "current_para":"—", "today_sabaq":"—", "tomorrow_prep":"—", "activity":[] },
+          { "name": "Mahdi", "roll": "08", "id": "BQSNU08", "department": "Nurani", "start_date":"2025-12-05", "completed_paras":[], "current_para":"—", "today_sabaq":"—", "tomorrow_prep":"—", "activity":[] },
+          { "name": "Soyad", "roll": "09", "id": "BQSNU09", "department": "Nurani", "start_date":"2025-12-10", "completed_paras":[], "current_para":"—", "today_sabaq":"—", "tomorrow_prep":"—", "activity":[] }
+        ]
+      }
+    ]
+  }
+}
