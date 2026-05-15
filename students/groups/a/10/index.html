@@ -70,7 +70,7 @@
       
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-3">
         <div class="flex items-center gap-4 md:col-span-1">
-          <img id="studentPhoto" src="Sown.png" alt="Student Photo" class="h-24 w-24 rounded-full object-cover border" />
+          <img id="studentPhoto" src="Tawfiq.png" alt="Student Photo" class="h-24 w-24 rounded-full object-cover border" />
         </div>
         <div class="md:col-span-2 space-y-1">
           <p><span class="label">Name:</span> <span id="name">—</span></p>
@@ -104,13 +104,6 @@
           <div class="small-muted mt-2" id="sinceStartLabel">Start: —</div>
         </div>
 
-        <!-- 2: Count since all 30 para completed -->
-        <div class="clock-box">
-          <h3 class="font-semibold text-blue-800">Count since all 30 para complete</h3>
-          <div id="sinceCompleteClock" class="mono text-lg text-orange-600">Loading...</div>
-          <div class="small-muted mt-2" id="sinceCompleteLabel">All complete: —</div>
-        </div>
-
         <!-- 3: Countdown to target -->
         <div class="clock-box">
           <h3 class="font-semibold text-blue-800">Countdown to target</h3>
@@ -118,12 +111,6 @@
           <div class="small-muted mt-2" id="targetLabel">Target: —</div>
         </div>
       </div>
-    </section>
-
-    <!-- Summary -->
-    <section id="summarySection" class="bg-white rounded-lg shadow p-5">
-      <h2 id="summaryTitle" class="text-xl font-semibold text-blue-900 cursor-pointer" onclick="toggleSummary()">Summary (Completed / In Progress)</h2>
-      <div id="summaryList" class="summary-list collapse" style="max-height:0;"></div>
     </section>
 
     <!-- Hifz Tracker -->
@@ -159,34 +146,7 @@
       <p id="commitmentText" class="mt-2 text-gray-700">Loading...</p>
     </section>
 
-    <!-- Comments -->
-    <section id="comments" class="bg-white rounded-lg shadow p-5">
-      <h2 id="commentsTitle" class="text-xl font-semibold text-blue-900">Teacher / Guardian Notes</h2>
 
-      <div id="commentsList" class="mt-3 space-y-3"></div>
-
-      <div class="mt-4 grid grid-cols-1 md:grid-cols-4 gap-3 items-end">
-        <div class="md:col-span-1">
-          <label class="block text-sm font-medium text-gray-700">Role</label>
-          <select id="commentRole" class="w-full border rounded p-2">
-            <option value="principal">Principal</option>
-            <option value="teacher">Teacher</option>
-            <option value="guardian">Guardian</option>
-          </select>
-        </div>
-        <div class="md:col-span-3">
-          <label class="block text-sm font-medium text-gray-700">Write suggestion, feedback or complaint</label>
-          <textarea id="newComment" class="w-full border rounded p-2" rows="3" placeholder="Type your message here..."></textarea>
-        </div>
-      </div>
-
-      <div class="mt-3 flex gap-2">
-        <button class="btn btn-primary" onclick="addComment()">Submit</button>
-        <button class="btn btn-ghost" onclick="clearComments()">Clear Local Comments</button>
-      </div>
-
-      <p class="small-muted mt-3" id="accessNote"></p>
-    </section>
 
     <!-- MJ Ahmad Message -->
     <section id="mjSection" class="bg-white rounded-lg shadow p-5">

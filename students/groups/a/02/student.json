@@ -38,20 +38,20 @@
     }
   },
   "student": {
-    "name": "Abdullah Al Mahi",
+    "name": "Sakib Al Hasan",
     "department": "Hifzul Quran",
     "guardian": {
-      "name": "Md. Hafizur Rahman",
-      "contact": "+8801601463362"
+      "name": "Md. Lokman Ali",
+      "contact": "+8801747745100"
     },
     "group": "Khatami",
     "group_ustad": "Ustad Arif",
-    "hifz_start_date": "2023-10-01T00:00:00+06:00",
-    "hifz_all_complete_date": "2025-12-30T00:00:00+06:00",
+    "hifz_start_date": "2022-10-11T00:00:00+06:00",
+    "hifz_all_complete_date": "2025-10-12T00:00:00+06:00",
     "memorization": {
       "current_juz": 15,
       "target_juz": 30,
-      "completed_by": "2025-12-30T00:00:00+06:00",
+      "completed_by": "2025-10-12T00:00:00+06:00",
       "upcoming_deadline": "2027-02-28T23:59:59+06:00"
     },
     "hifz_tracker": [
@@ -108,7 +108,7 @@
           },
           {
             "page_number": 13,
-            "status": "in progress"
+            "status": "completed"
           },
           {
             "page_number": 14,
@@ -116,7 +116,7 @@
           },
           {
             "page_number": 15,
-            "status": "in progress"
+            "status": "completed"
           },
           {
             "page_number": 16,
@@ -124,7 +124,7 @@
           },
           {
             "page_number": 17,
-            "status": "pending"
+            "status": "completed"
           },
           {
             "page_number": 18,
@@ -132,7 +132,7 @@
           },
           {
             "page_number": 19,
-            "status": "pending"
+            "status": "completed"
           },
           {
             "page_number": 20,
@@ -177,15 +177,15 @@
           },
           {
             "page_number": 9,
-            "status": "pending"
+            "status": "completed"
           },
           {
             "page_number": 10,
-            "status": "pending"
+            "status": "completed"
           },
           {
             "page_number": 11,
-            "status": "pending"
+            "status": "completed"
           },
           {
             "page_number": 12,
@@ -193,7 +193,7 @@
           },
           {
             "page_number": 13,
-            "status": "pending"
+            "status": "completed"
           },
           {
             "page_number": 14,
@@ -201,23 +201,23 @@
           },
           {
             "page_number": 15,
-            "status": "pending"
+            "status": "completed"
           },
           {
             "page_number": 16,
-            "status": "pending"
+            "status": "completed"
           },
           {
             "page_number": 17,
-            "status": "pending"
+            "status": "completed"
           },
           {
             "page_number": 18,
-            "status": "pending"
+            "status": "completed"
           },
           {
             "page_number": 19,
-            "status": "pending"
+            "status": "completed"
           },
           {
             "page_number": 20,
@@ -230,23 +230,23 @@
         "pages": [
           {
             "page_number": 1,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 2,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 3,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 4,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 5,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 6,
@@ -258,15 +258,15 @@
           },
           {
             "page_number": 8,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 9,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 10,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 11,
@@ -278,19 +278,19 @@
           },
           {
             "page_number": 13,
-            "status": "pending"
+            "status": "completed"
           },
           {
             "page_number": 14,
-            "status": "pending"
+            "status": "completed"
           },
           {
             "page_number": 15,
-            "status": "pending"
+            "status": "completed"
           },
           {
             "page_number": 16,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 17,
@@ -298,7 +298,7 @@
           },
           {
             "page_number": 18,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 19,
@@ -306,7 +306,7 @@
           },
           {
             "page_number": 20,
-            "status": "completed"
+            "status": "pending"
           }
         ]
       },
@@ -335,7 +335,7 @@
           },
           {
             "page_number": 6,
-            "status": "pending"
+            "status": "completed"
           },
           {
             "page_number": 7,
@@ -347,15 +347,15 @@
           },
           {
             "page_number": 9,
-            "status": "pending"
+            "status": "completed"
           },
           {
             "page_number": 10,
-            "status": "pending"
+            "status": "completed"
           },
           {
             "page_number": 11,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 12,
@@ -367,7 +367,7 @@
           },
           {
             "page_number": 14,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 15,
@@ -375,15 +375,15 @@
           },
           {
             "page_number": 16,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 17,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 18,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 19,
@@ -391,7 +391,7 @@
           },
           {
             "page_number": 20,
-            "status": "completed"
+            "status": "pending"
           }
         ]
       },
@@ -460,23 +460,23 @@
           },
           {
             "page_number": 16,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 17,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 18,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 19,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 20,
-            "status": "completed"
+            "status": "pending"
           }
         ]
       },
@@ -485,15 +485,15 @@
         "pages": [
           {
             "page_number": 1,
-            "status": "pending"
+            "status": "completed"
           },
           {
             "page_number": 2,
-            "status": "pending"
+            "status": "completed"
           },
           {
             "page_number": 3,
-            "status": "pending"
+            "status": "completed"
           },
           {
             "page_number": 4,
@@ -505,47 +505,47 @@
           },
           {
             "page_number": 6,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 7,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 8,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 9,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 10,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 11,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 12,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 13,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 14,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 15,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 16,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 17,
@@ -570,11 +570,11 @@
         "pages": [
           {
             "page_number": 1,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 2,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 3,
@@ -594,7 +594,7 @@
           },
           {
             "page_number": 7,
-            "status": "pending"
+            "status": "completed"
           },
           {
             "page_number": 8,
@@ -675,7 +675,7 @@
           },
           {
             "page_number": 6,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 7,
@@ -691,7 +691,7 @@
           },
           {
             "page_number": 10,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 11,
@@ -748,7 +748,7 @@
           },
           {
             "page_number": 3,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 4,
@@ -788,7 +788,7 @@
           },
           {
             "page_number": 13,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 14,
@@ -800,7 +800,7 @@
           },
           {
             "page_number": 16,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 17,
@@ -825,7 +825,7 @@
         "pages": [
           {
             "page_number": 1,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 2,
@@ -861,7 +861,7 @@
           },
           {
             "page_number": 10,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 11,
@@ -901,7 +901,7 @@
           },
           {
             "page_number": 20,
-            "status": "completed"
+            "status": "pending"
           }
         ]
       },
@@ -930,7 +930,7 @@
           },
           {
             "page_number": 6,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 7,
@@ -986,7 +986,7 @@
           },
           {
             "page_number": 20,
-            "status": "completed"
+            "status": "pending"
           }
         ]
       },
@@ -1011,7 +1011,7 @@
           },
           {
             "page_number": 5,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 6,
@@ -1047,7 +1047,7 @@
           },
           {
             "page_number": 14,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 15,
@@ -1108,7 +1108,7 @@
           },
           {
             "page_number": 8,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 9,
@@ -1132,7 +1132,7 @@
           },
           {
             "page_number": 14,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 15,
@@ -1165,7 +1165,7 @@
         "pages": [
           {
             "page_number": 1,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 2,
@@ -1173,7 +1173,7 @@
           },
           {
             "page_number": 3,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 4,
@@ -1181,11 +1181,11 @@
           },
           {
             "page_number": 5,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 6,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 7,
@@ -1294,23 +1294,23 @@
           },
           {
             "page_number": 12,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 13,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 14,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 15,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 16,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 17,
@@ -1335,19 +1335,19 @@
         "pages": [
           {
             "page_number": 1,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 2,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 3,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 4,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 5,
@@ -1355,7 +1355,7 @@
           },
           {
             "page_number": 6,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 7,
@@ -1375,7 +1375,7 @@
           },
           {
             "page_number": 11,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 12,
@@ -1456,7 +1456,7 @@
           },
           {
             "page_number": 10,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 11,
@@ -1496,7 +1496,7 @@
           },
           {
             "page_number": 20,
-            "status": "completed"
+            "status": "pending"
           }
         ]
       },
@@ -1505,7 +1505,7 @@
         "pages": [
           {
             "page_number": 1,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 2,
@@ -1553,7 +1553,7 @@
           },
           {
             "page_number": 13,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 14,
@@ -1590,7 +1590,7 @@
         "pages": [
           {
             "page_number": 1,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 2,
@@ -1618,7 +1618,7 @@
           },
           {
             "page_number": 8,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 9,
@@ -1646,7 +1646,7 @@
           },
           {
             "page_number": 15,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 16,
@@ -1683,11 +1683,11 @@
           },
           {
             "page_number": 3,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 4,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 5,
@@ -1731,7 +1731,7 @@
           },
           {
             "page_number": 15,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 16,
@@ -1739,7 +1739,7 @@
           },
           {
             "page_number": 17,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 18,
@@ -1751,7 +1751,7 @@
           },
           {
             "page_number": 20,
-            "status": "completed"
+            "status": "pending"
           }
         ]
       },
@@ -1768,7 +1768,7 @@
           },
           {
             "page_number": 3,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 4,
@@ -1796,7 +1796,7 @@
           },
           {
             "page_number": 10,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 11,
@@ -1812,7 +1812,7 @@
           },
           {
             "page_number": 14,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 15,
@@ -1869,7 +1869,7 @@
           },
           {
             "page_number": 7,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 8,
@@ -1901,11 +1901,11 @@
           },
           {
             "page_number": 15,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 16,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 17,
@@ -1921,7 +1921,7 @@
           },
           {
             "page_number": 20,
-            "status": "completed"
+            "status": "pending"
           }
         ]
       },
@@ -1930,19 +1930,19 @@
         "pages": [
           {
             "page_number": 1,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 2,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 3,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 4,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 5,
@@ -1970,7 +1970,7 @@
           },
           {
             "page_number": 11,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 12,
@@ -1994,7 +1994,7 @@
           },
           {
             "page_number": 17,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 18,
@@ -2006,7 +2006,7 @@
           },
           {
             "page_number": 20,
-            "status": "completed"
+            "status": "pending"
           }
         ]
       },
@@ -2015,7 +2015,7 @@
         "pages": [
           {
             "page_number": 1,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 2,
@@ -2031,15 +2031,15 @@
           },
           {
             "page_number": 5,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 6,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 7,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 8,
@@ -2075,7 +2075,7 @@
           },
           {
             "page_number": 16,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 17,
@@ -2104,7 +2104,7 @@
           },
           {
             "page_number": 2,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 3,
@@ -2112,7 +2112,7 @@
           },
           {
             "page_number": 4,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 5,
@@ -2128,7 +2128,7 @@
           },
           {
             "page_number": 8,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 9,
@@ -2152,7 +2152,7 @@
           },
           {
             "page_number": 14,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 15,
@@ -2205,63 +2205,63 @@
           },
           {
             "page_number": 6,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 7,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 8,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 9,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 10,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 11,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 12,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 13,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 14,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 15,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 16,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 17,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 18,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 19,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 20,
-            "status": "completed"
+            "status": "pending"
           }
         ]
       },
@@ -2290,63 +2290,63 @@
           },
           {
             "page_number": 6,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 7,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 8,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 9,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 10,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 11,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 12,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 13,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 14,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 15,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 16,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 17,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 18,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 19,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 20,
-            "status": "completed"
+            "status": "pending"
           }
         ]
       },
@@ -2355,83 +2355,83 @@
         "pages": [
           {
             "page_number": 1,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 2,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 3,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 4,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 5,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 6,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 7,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 8,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 9,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 10,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 11,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 12,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 13,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 14,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 15,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 16,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 17,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 18,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 19,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 20,
-            "status": "completed"
+            "status": "pending"
           }
         ]
       },
@@ -2460,63 +2460,63 @@
           },
           {
             "page_number": 6,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 7,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 8,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 9,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 10,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 11,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 12,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 13,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 14,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 15,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 16,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 17,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 18,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 19,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 20,
-            "status": "completed"
+            "status": "pending"
           },
           {
             "page_number": 21,
@@ -2589,55 +2589,55 @@
           },
           {
             "page_number": 13,
-            "status": "completed"
+            "status": "in progress"
           },
           {
             "page_number": 14,
-            "status": "completed"
+            "status": "in progress"
           },
           {
             "page_number": 15,
-            "status": "completed"
+            "status": "in progress"
           },
           {
             "page_number": 16,
-            "status": "completed"
+            "status": "in progress"
           },
           {
             "page_number": 17,
-            "status": "completed"
+            "status": "in progress"
           },
           {
             "page_number": 18,
-            "status": "completed"
+            "status": "in progress"
           },
           {
             "page_number": 19,
-            "status": "completed"
+            "status": "in progress"
           },
           {
             "page_number": 20,
-            "status": "completed"
+            "status": "in progress"
           },
           {
             "page_number": 21,
-            "status": "pending"
+            "status": "in progress"
           },
           {
             "page_number": 22,
-            "status": "pending"
+            "status": "in progress"
           },
           {
             "page_number": 23,
-            "status": "pending"
+            "status": "in progress"
           },
           {
             "page_number": 24,
-            "status": "pending"
+            "status": "in progress"
           },
           {
             "page_number": 25,
-            "status": "pending"
+            "status": "in progress"
           }
         ]
       }
@@ -2660,8 +2660,8 @@
       }
     ],
     "commitment": {
-      "en": "I, Abdullah Al Mahi, commit to diligently memorizing the Quran, respecting my teachers and peers, and upholding the values of discipline, sincerity, and honesty in my studies.",
-      "bn": "আমি, আবদুল্লাহ আল মাহি, আমি একমাত্র মহান রাব্বুল আলামীনের সন্তুষ্টি অর্জনের জন্যই কোরআন মাজিদ মুখস্থ করছি। মহান রাব্বুল আলামীন যেন আমাকে কোরআন মাজিদ মুখস্থ করার এবং কোরআন অনুযায়ী জীবন পরিচালনা করার তৌফিক দান করেন। এবং কোরআন মাজিদ পরিপূর্ণ ভাবে এয়াদ ক‌রা‌র তৌফিক দান করেন।"
+      "en": "I, Sakib Al Hasan, commit to diligently memorizing the Quran, respecting my teachers and peers, and upholding the values of discipline, sincerity, and honesty in my studies.",
+      "bn": "আমি, সাকিব আল হাসান, আমি একমাত্র মহান রাব্বুল আলামীনের সন্তুষ্টি অর্জনের জন্যই কোরআন মাজিদ মুখস্থ করছি। মহান রাব্বুল আলামীন যেন আমাকে কোরআন মাজিদ মুখস্থ করার এবং কোরআন अनुयायी जीवन परिचालना करार तौफीक दान करें। एवं कोरआन माजिद परिपूर्ण भावे एयाद करार तौफीक दान करें।"
     },
     "mj_ahmad_message": {
       "en": "Every page you memorize is a step closer to light. Stay steadfast, Zubair — your journey is noble.",
