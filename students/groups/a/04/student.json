@@ -38,10 +38,10 @@
     }
   },
   "student": {
-    "name": "Jihad Al Hasan",
+    "name": "Md Jihad Hasan",
     "department": "Hifzul Quran",
     "guardian": {
-      "name": "Md. Juyal",
+      "name": "Md. Aminul Islam",
       "contact": "+8801714788772"
     },
     "group": "Khatami",
@@ -2334,19 +2334,19 @@
           },
           {
             "page_number": 17,
-            "status": "in progress"
+            "status": "completed"
           },
           {
             "page_number": 18,
-            "status": "in progress"
+            "status": "completed"
           },
           {
             "page_number": 19,
-            "status": "pending"
+            "status": "in progress"
           },
           {
             "page_number": 20,
-            "status": "pending"
+            "status": "in progress"
           }
         ]
       },
